@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="1-1 BigSmall" default="all" basedir=".">
+
+    <property name="package" value="example" />
+    <property name="packagenames" value="${package}" />
+    <property name="destdir" value="./Classes" />
+    <property name="instdir" value="./Example.app/Contents/Resources/Java" />
+    <property name="copyright" value="Copyright 2008-2016 AOKI Atsushi. All Rights Reserved." />
+    <property name="zipname" value="${ant.project.name}" />
+
+    <target name="all" depands="jar" description="">
+        <exec executable="date" spawn="false" />
+    </target>
+
+    <target name="prepare" depands="" description="">
+        <mkdir dir="${destdir}" />
+    	<exec executable="date" spawn="false"/>
+    </target>
+
+    <target name="compile" depands="prepare" description="">
+
+        <exec executable="date" spawn="false" />
+    </target>
+
+    <target name="jar" depands="compile" description="make jar file">
+        <javac
+			fork="true"
+			srcdir="${basedir}"
+			destdir="${destdir}"
+			includeAntRuntime="true"
+			encoding="UTF-8"
+			deprecation="on"
+			verbose="false">
+			<compilerarg value="-J-Dfile.encoding=UTF8" />
+			<compilerarg value="-Xlint:all" />
+			<classpath>
+				<pathelement location="." />
+			</classpath>
+		</javac>
+        <exec executable="date" spawn="false" />
+    </target>
+
+    <target name="clean" depands="" description="">
+        <delete dir="${destdir}" />
+		<delete file="${package}.jar" />
+		<delete dir="${docdir}" />
+		<delete dir="${instdir}" />
+		<delete file="../${zipname}.zip" />
+		<delete>
+			<fileset dir="${package}" includes="*.class" />
+		</delete>
+        <exec executable="date" spawn="false" />
+    </target>
+
+    <target name="test" depands="" description="">
+        <exec executable="java" spawn="false">
+			<arg line="-Dfile.encoding=UTF-8 -Xmx512m -Xss1024k -jar ${package}.jar" />
+		</exec>
+        <exec executable="date" spawn="false" />
+    </target>
+
+    <target name="install" depands="" description="">
+        <copy file="${package}.jar" todir="${instdir}" />
+		<exec executable="chmod">
+			<arg line="755 ${instdir}/../../MacOS/applet" />
+		</exec>
+        <exec executable="date" spawn="false" />
+    </target>
+
+    <target name="doc" depands="" description="">
+        <jar
+			jarfile="${package}.jar"
+			basedir="${destdir}"
+			manifest="${package}.mf">
+		</jar>
+        <exec executable="date" spawn="false" />
+    </target>
+
+    <target name="zip" depands="" description="">
+        <delete file="../${zipname}.zip" />
+		<zip destfile="../${zipname}.zip">
+			<zipfileset dir="." prefix="${zipname}" />
+		</zip>
+        <exec executable="date" spawn="false" />
+    </target>
+ 
+</project>
