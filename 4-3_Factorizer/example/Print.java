@@ -30,7 +30,9 @@ public class Print extends Object
         max = aList.size();
         aBuffer.append(aNumber);
         aBuffer.append(" = ");
+
         aList.forEach(this::printFormula);
+
         System.out.println(aBuffer.toString());
     }
 
