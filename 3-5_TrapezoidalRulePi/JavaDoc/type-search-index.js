@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"example","l":"Print"},{"p":"example","l":"TrapezoidalRulePi"},{"l":"すべてのクラス","url":"allclasses-index.html"}]
