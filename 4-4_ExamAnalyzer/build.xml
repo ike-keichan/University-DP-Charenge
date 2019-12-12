@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="" default="all" basedir=".">
+<project name="4-4_ExamAnalyzer" default="all" basedir=".">
 
     <property name="package" value="example" />
     <property name="packagenames" value="${package}" />
