@@ -28,3 +28,20 @@
 + Apache Antを用いてjarファイルの生成を行う。
 + Apache Antを用いてJavaDocの生成を行う。
 + Apache Antを用いてアプリケーションの生成を行う。
+
+## 実行方法
++ 実行
+```
+$make test
+```
+
++ Applicationの生成
+```
+$make install
+```
+
++ JavaDocの生成
+```
+$make clean
+```
+
