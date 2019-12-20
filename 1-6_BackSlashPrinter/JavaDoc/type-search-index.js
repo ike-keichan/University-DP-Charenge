@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"example","l":"BackSlashPrinter"},{"l":"すべてのクラス","url":"allclasses-index.html"}]

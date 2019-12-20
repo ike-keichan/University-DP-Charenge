@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"example","c":"BigAndSmall","l":"BigAndSmall()","url":"%3Cinit%3E()"},{"p":"example","c":"BigAndSmall","l":"main(String[])","url":"main(java.lang.String[])"}]

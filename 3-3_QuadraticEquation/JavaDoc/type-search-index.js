@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"example","l":"Print"},{"p":"example","l":"QuadraticEquation"},{"l":"すべてのクラス","url":"allclasses-index.html"}]

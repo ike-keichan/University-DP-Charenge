@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"example","c":"BackSlashPrinter","l":"BackSlashPrinter()","url":"%3Cinit%3E()"},{"p":"example","c":"BackSlashPrinter","l":"main(String[])","url":"main(java.lang.String[])"}]
