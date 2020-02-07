@@ -1,8 +1,6 @@
 package example;
 
-import java.util.Random;
-
-public class ExamScore extends Object
+public class Complex extends Object
 {
     /**
      * 受験者名を記憶するフィールド
