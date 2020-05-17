@@ -1,0 +1,10 @@
+(defun big-and-small (a-number)
+    (if (< a-number 0.5)
+        (print (concatenate 'string "value:" (write-to-string a-number) " result:Small")
+        )
+        (print (concatenate 'string "value:" (write-to-string a-number) " result:Big")
+        )
+    )
+)
+
+(big-and-small (random 1.0))
