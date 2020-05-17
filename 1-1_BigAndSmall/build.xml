@@ -2,7 +2,7 @@
 
 <project name="1-1_BigSmall" default="all" basedir=".">
 
-    <property name="package" value="example" />
+    <property name="package" value="src" />
     <property name="packagenames" value="${package}" />
     <property name="destdir" value="./Classes" />
     <property name="docdir" value="./JavaDoc" />
