@@ -1,8 +1,14 @@
 (defun big-and-small (a-number)
     (if (< a-number 0.5)
-        (print (concatenate 'string "value:" (write-to-string a-number) " result:Small")
+        (progn 
+            (princ "value:")
+            (princ a-number)
+            (princ " result:Small")
         )
-        (print (concatenate 'string "value:" (write-to-string a-number) " result:Big")
+        (progn 
+            (princ "value:")
+            (princ a-number)
+            (princ " result:Big")
         )
     )
 )
