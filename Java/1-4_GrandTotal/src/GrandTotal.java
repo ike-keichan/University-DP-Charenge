@@ -2,6 +2,11 @@ package src;
 
 import java.util.stream.IntStream;
 
+/**
+ * 総和を求めるクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class GrandTotal extends Object
 {
     /**

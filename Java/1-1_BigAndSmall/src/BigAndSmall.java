@@ -5,6 +5,8 @@ import java.util.function.Predicate;
 
 /**
  * ランダムな数字を0.5と比較した大小を出力するクラス
+ * @author Keisuke Ikeda\
+ * @version 1.2
  */
 public class BigAndSmall extends Object
 {

@@ -5,6 +5,8 @@ import java.util.function.ObjIntConsumer;
 
 /**
  * 四則演算を行うクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
  */
 public class Operators extends Object
 {     

@@ -2,6 +2,11 @@ package src;
 
 import java.util.stream.IntStream;
 
+/**
+ * 九九表を出力するクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class Multiplication extends Object
 {
     /**

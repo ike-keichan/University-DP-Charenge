@@ -5,6 +5,8 @@ import java.util.stream.IntStream;
 
 /**
  * ターミナル上にX”エックス”を描くクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
  */
 public class XPrinter extends Object
 {

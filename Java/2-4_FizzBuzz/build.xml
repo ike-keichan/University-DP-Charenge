@@ -2,12 +2,12 @@
 
 <project name="2-4_FizzBuzz" default="all" basedir=".">
 
-    <property name="package" value="example" />
+    <property name="package" value="src" />
     <property name="packagenames" value="${package}" />
     <property name="destdir" value="./Classes" />
     <property name="docdir" value="./JavaDoc" />
     <property name="instdir" value="./Example.app/Contents/Resources/Java" />
-    <property name="copyright" value="Copyright 2019 KEISUKE IKEDA. All Rights Reserved." />
+    <property name="copyright" value="Copyright 2019-20 KEISUKE IKEDA. All Rights Reserved." />
     <property name="zipname" value="${ant.project.name}" />
 
     <target name="all" depends="jar" description="build all">

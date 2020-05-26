@@ -2,6 +2,11 @@ package src;
 
 import java.util.function.Predicate;
 
+/**
+ * 閏年を判定するクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class LeapYear extends Object
 {
     /**

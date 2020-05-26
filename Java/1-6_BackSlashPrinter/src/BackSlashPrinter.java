@@ -4,6 +4,8 @@ import java.util.stream.IntStream;
 
 /**
  * ターミナル上に＼”バックスラッシュ”を描くクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
  */
 public class BackSlashPrinter extends Object
 {
