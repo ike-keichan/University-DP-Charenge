@@ -35,7 +35,8 @@ public class TrapezoidalRulePi extends Object
      * コンストラクタ
      * @param arguments 引数の文字列の配列
      */
-    public TrapezoidalRulePi(String[] arguments){
+    public TrapezoidalRulePi(String[] arguments)
+    {
         //コマンドライン引数の有無の判別
         if(arguments.length == 0){
             System.out.println("入力がなかったため、コマンドライン引数を「0.001」とします");
