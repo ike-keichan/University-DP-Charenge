@@ -23,7 +23,7 @@ public class TrapezoidalRulePi extends Object
     /**
 	 * 台数の面積を算出する関数
 	 */
-    final DoubleUnaryOperator trapezoidArea = (aDouble) -> 
+    private DoubleUnaryOperator trapezoidArea = (aDouble) -> 
     {
         Double left = Math.sqrt(1 - (aDouble - this.width) * (aDouble - this.width));
         Double right = Math.sqrt(1 - aDouble * aDouble);
@@ -69,3 +69,4 @@ public class TrapezoidalRulePi extends Object
         return this.sum * 4;
     }
 }
+
