@@ -1,5 +1,10 @@
-package example;
+package src;
 
+/**
+ * 素数表を生成するクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class Calculation extends Object
 {
     /**
@@ -28,7 +33,6 @@ public class Calculation extends Object
             }
         }
         return flag;
-
     }
 }
 

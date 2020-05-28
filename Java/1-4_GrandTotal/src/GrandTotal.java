@@ -23,7 +23,14 @@ public class GrandTotal extends Object
         //　それぞれの総和を表示
         IntStream.range(1, 11).forEach( aNumber -> {
             this.sum += aNumber;
-            System.out.println("1から" + aNumber + "までの総和は" + this.sum + "です.");
+            //出力
+            final StringBuffer aBuffer = new StringBuffer();
+            aBuffer.append("1から");
+            aBuffer.append(aNumber);
+            aBuffer.append("までの総和は");
+            aBuffer.append(this.sum);
+            aBuffer.append("です.");
+            System.out.println(aBuffer.toString());
         });
     }
 

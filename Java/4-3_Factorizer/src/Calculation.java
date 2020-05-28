@@ -1,5 +1,10 @@
-package example;
+package src;
 
+/**
+ * 素因数を算出するクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class Calculation extends Object
 {
     /**
@@ -20,9 +25,7 @@ public class Calculation extends Object
                 break;
             }
         }
+
         return this.anotherNumber;
-
     }
-
 }
-

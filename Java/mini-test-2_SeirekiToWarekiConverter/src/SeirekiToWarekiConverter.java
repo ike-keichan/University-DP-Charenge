@@ -19,12 +19,12 @@ public class SeirekiToWarekiConverter extends Object
 	/**
 	 * 西暦を出力する関数
 	 */
-	private Runnable ADPrint = () -> { System.out.print("西暦:" + this.year + "年  "); };
+	final private Runnable ADPrint = () -> { System.out.print("西暦:" + this.year + "年  "); };
 
 	/**
 	 * 和暦を出力する関数
 	 */
-	private Consumer<String> JCPrint = (aString) -> { System.out.println("和暦:" + aString); };
+	final private Consumer<String> JCPrint = (aString) -> { System.out.println("和暦:" + aString); };
 
     /**
      * コンストラクタ

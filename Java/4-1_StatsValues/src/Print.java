@@ -1,17 +1,22 @@
-package example;
+package src;
 
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * 結果を出力するクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class Print extends Object
 {
     /**
      * ループ回数を記憶するフィールド
      */
-    private  Integer count = 1;
+    private Integer count = 1;
 
     /**
-     * 発展プログラミング演習 練習問題4-1の出力プログラム。
+     * 発展プログラミング演習 練習問題4-1の出力プログラム
      * @param aList 乱数リスト
      * @param sum　合計
      * @param max　最大値
@@ -31,13 +36,11 @@ public class Print extends Object
         aBuffer.append(sum / 100);
         System.out.println(aBuffer.toString());
 
-        //ラムダ式
         aList.forEach(this::printNumber);
-
     }
 
     /**
-     * 発展プログラミング演習 練習問題4-1の出力プログラム。
+     * 発展プログラミング演習 練習問題4-1の出力プログラム
      * @param number 乱数の値
      */
     public void printNumber(Integer number){
@@ -47,6 +50,6 @@ public class Print extends Object
         }else {
             System.out.printf("%4d ", number);
         }
-        count++;
+        this.count++;
     }
 }

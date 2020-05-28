@@ -1,7 +1,12 @@
-package example;
+package src;
 
 import java.util.Random;
 
+/**
+ * 各学生の試験成績を記憶するクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class ExamScore extends Object
 {
     /**
@@ -80,6 +85,11 @@ public class ExamScore extends Object
      */
     public void printScore()
     {
-        System.out.printf("%3s| %6d| %6d| %6d| %6.3f|%n", this.name, this.math, this.physics, this.english, (this.math + this.physics + this.english) / 3.0);
+        System.out.printf("%3s| %6d| %6d| %6d| %6.3f|%n", 
+                        this.name, 
+                        this.math, 
+                        this.physics, 
+                        this.english, 
+                        (this.math + this.physics + this.english) / 3.0);
     }
 }

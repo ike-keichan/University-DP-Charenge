@@ -1,8 +1,13 @@
-package example;
+package src;
 
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * 結果を出力するクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class Print extends Object
 {
     /**
@@ -44,8 +49,7 @@ public class Print extends Object
         aBuffer.append(aNumber);
         if(!this.count.equals(max)){
             aBuffer.append(" * ");
-            count++;
+            this.count++;
         }
     }
-
 }

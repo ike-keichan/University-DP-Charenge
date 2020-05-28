@@ -1,8 +1,14 @@
-package example;
+package src;
 
 import java.util.List;
+import java.util.stream.IntStream;
 import java.util.ArrayList;
 
+/**
+ * 結果を出力するクラス
+ * @author Keisuke Ikeda
+ * @version 1.2
+ */
 public class Print extends Object
 {
     /**
@@ -19,15 +25,15 @@ public class Print extends Object
     public void printAnswer(List<Integer> aList, List<Boolean> primeList, Integer aNumber) {
 
         //素数を判別して出力
-        for(Integer index = 0; index <= aNumber; index++){
+        IntStream.rangeClosed(0, aNumber).forEach(index -> {
             if(primeList.get(index)){
-                if (count % 10 == 9) {
+                if (this.count % 10 == 9) {
                     System.out.printf("%4d %n", aList.get(index));
                 }else {
                     System.out.printf("%4d", aList.get(index));
                 }
-                count++;
+                this.count++;
             }
-        }
+        });
     }
 }

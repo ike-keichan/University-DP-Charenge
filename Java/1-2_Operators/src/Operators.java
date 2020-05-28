@@ -25,11 +25,47 @@ public class Operators extends Object
 	 */
     final ObjIntConsumer<Integer> resultPrint = (firstNumber, secondNumber) -> 
     { 
-        System.out.println(firstNumber + "+" + secondNumber + "=" + (firstNumber + secondNumber));
-        System.out.println(firstNumber + "-" + secondNumber + "=" + (firstNumber - secondNumber));
-        System.out.println(firstNumber + "*" + secondNumber + "=" + (firstNumber * secondNumber));
-        System.out.println(firstNumber + "/" + secondNumber + "=" + (firstNumber / secondNumber));
-        System.out.println(firstNumber + "%" + secondNumber + "=" + (firstNumber % secondNumber));
+        //加算
+        final StringBuffer firstBuffer = new StringBuffer();
+        firstBuffer.append(firstNumber);
+        firstBuffer.append("+");
+        firstBuffer.append(secondNumber);
+        firstBuffer.append("=");
+        firstBuffer.append(firstNumber + secondNumber);
+        System.out.println(firstBuffer.toString());
+        //減算
+        final StringBuffer secondBuffer = new StringBuffer();
+        secondBuffer.append(firstNumber);
+        secondBuffer.append("-");
+        secondBuffer.append(secondNumber);
+        secondBuffer.append("=");
+        secondBuffer.append(firstNumber - secondNumber);
+        System.out.println(secondBuffer.toString());
+        //減算
+        final StringBuffer thirdBuffer = new StringBuffer();
+        thirdBuffer.append(firstNumber);
+        thirdBuffer.append("*");
+        thirdBuffer.append(secondNumber);
+        thirdBuffer.append("=");
+        thirdBuffer.append(firstNumber * secondNumber);
+        System.out.println(thirdBuffer.toString());
+        //乗算
+        final StringBuffer fourthBuffer = new StringBuffer();
+        fourthBuffer.append(firstNumber);
+        fourthBuffer.append("/");
+        fourthBuffer.append(secondNumber);
+        fourthBuffer.append("=");
+        fourthBuffer.append(firstNumber / secondNumber);
+        System.out.println(fourthBuffer.toString());
+        //徐算
+        final StringBuffer fifthBuffer = new StringBuffer();
+        fourthBuffer.append(firstNumber);
+        fourthBuffer.append("%");
+        fourthBuffer.append(secondNumber);
+        fourthBuffer.append("=");
+        fourthBuffer.append(firstNumber % secondNumber);
+        System.out.println(fifthBuffer.toString());
+        
     };
 
     /**
