@@ -37,6 +37,12 @@
 $make test
 ```
 
++　実行（引数を指定する場合）
+```
+$make test
+$java -jar src.jar "引数"
+```
+
 + Applicationの生成
 ```
 $make install
