@@ -3,9 +3,10 @@ package src;
 import java.util.Comparator;
 import java.util.stream.IntStream;
 
-
 /**
  * 名前を逆順にするクラス
+ * @author Keisuke Ikeda
+ * @version 1.0
  */
 public class NameReverser extends Object
 {     

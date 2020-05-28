@@ -25,10 +25,10 @@ public class TrapezoidalRulePi extends Object
 	 */
     private DoubleUnaryOperator trapezoidArea = (aDouble) -> 
     {
-        Double left = Math.sqrt(1 - (aDouble - this.width) * (aDouble - this.width));
-        Double right = Math.sqrt(1 - aDouble * aDouble);
+        Double upperBottom = Math.sqrt(1 - (aDouble - this.width) * (aDouble - this.width));
+        Double lowerBottom = Math.sqrt(1 - aDouble * aDouble);
         //面積の算出。
-        return (left + right) * this.width / 2;
+        return (upperBottom + lowerBottom) * this.width / 2;
     };
 
     /**

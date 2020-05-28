@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="mini-test-1_NameReverser" default="all" basedir=".">
+<project name="mini-test-3_Echo" default="all" basedir=".">
 
     <property name="package" value="src" />
     <property name="packagenames" value="${package}" />

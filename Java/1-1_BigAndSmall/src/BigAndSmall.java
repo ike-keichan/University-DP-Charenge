@@ -18,12 +18,12 @@ public class BigAndSmall extends Object
 	/**
 	 * valueを出力する関数
 	 */
-	Consumer<Double> valuePrint = (aDouble) -> { System.out.println("value:" + aDouble); };
+	private Consumer<Double> valuePrint = (aDouble) -> { System.out.println("value:" + aDouble); };
 
 	/**
 	 * resultを出力する関数
 	 */
-	Consumer<String> resultPrint = (aString) -> { System.out.println("result:" + aString); };
+	private Consumer<String> resultPrint = (aString) -> { System.out.println("result:" + aString); };
 
 	/**
 	 * 発展プログラミング演習 練習問題1-1の起動プログラム

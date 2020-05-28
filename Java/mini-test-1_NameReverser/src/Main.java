@@ -2,6 +2,8 @@ package src;
 
 /**
  * メインクラス
+ * @author Keisuke Ikeda
+ * @version 1.0
  */
 public class Main extends Object
 {
@@ -14,5 +16,4 @@ public class Main extends Object
         NameReverser aNameReverser = new NameReverser(arguments);
         aNameReverser.run();
 	}
-
 }
