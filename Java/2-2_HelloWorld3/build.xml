@@ -6,7 +6,7 @@
     <property name="packagenames" value="${package}" />
     <property name="destdir" value="./Classes" />
     <property name="docdir" value="./JavaDoc" />
-    <property name="instdir" value="./Example.app/Contents/Resources/Java" />
+    <property name="instdir" value="./Program.app/Contents/Resources/Java" />
     <property name="copyright" value="Copyright 2019−20 KEISUKE IKEDA. All Rights Reserved." />
     <property name="zipname" value="${ant.project.name}" />
 

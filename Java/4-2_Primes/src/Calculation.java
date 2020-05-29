@@ -21,7 +21,7 @@ public class Calculation extends Object
         if (aNumber.equals(0) | aNumber.equals(1)) {
             flag = false;
         }else {
-            for (Integer index = 2; index < 200; index++) {
+            for(Integer index = 2; index < 200; index++) {
                 if (aNumber.equals(index)) {
                     flag = true;
                 }else if (aNumber % index == 0) {

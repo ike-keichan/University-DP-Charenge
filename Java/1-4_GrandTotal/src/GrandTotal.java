@@ -12,7 +12,7 @@ public class GrandTotal extends Object
     /**
      * 総和を格納するフィールド
      */
-    Integer sum = 0;
+    private Integer sum = 0;
 
     /**
      * 発展プログラミング演習 練習問題1-4の起動プログラム
