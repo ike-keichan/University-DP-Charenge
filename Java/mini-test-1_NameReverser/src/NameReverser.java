@@ -37,8 +37,8 @@ public class NameReverser extends Object
         IntStream.range(0, this.name.length())
             .boxed()                            //IntegerのStreamに変形
             .sorted(Comparator.reverseOrder())  //逆順ソート
-            .forEach( anIndex -> {
-                System.out.print(this.name.charAt(anIndex));
+            .forEach( index -> {
+                System.out.print(this.name.charAt(index));
             });
         System.out.println();
     }

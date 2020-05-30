@@ -1,6 +1,11 @@
 package src;
 
 /**
+ * 問題
+ * Complex型に四則演算を行うメソッドを追加してください．
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.1
