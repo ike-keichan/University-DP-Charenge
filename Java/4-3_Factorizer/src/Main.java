@@ -1,6 +1,11 @@
 package src;
 
 /**
+ * 問題
+ * コマンドライン引数で与えられた整数値の素因数分解を行ってください
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.2

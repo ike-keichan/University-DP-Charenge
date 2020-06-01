@@ -1,11 +1,12 @@
 package src;
 
+import java.util.Comparator;
 import java.util.stream.IntStream;
 
 /**
  * 回文を判定するクラス
  * @author Keisuke Ikeda
- * @version 1.0
+ * @version 1.1
  */
 public class PalindromeChecker extends Object
 {     
@@ -45,11 +46,10 @@ public class PalindromeChecker extends Object
                 this.reversedString = this.reversedString + this.aString.charAt(index);
             });
 
+        //Printクラスのインスタンス化
+        Print aPrint = new Print();
+
         //出力
-        final StringBuffer aBuffer = new StringBuffer();
-        aBuffer.append(this.reversedString);
-        aBuffer.append("：");
-        aBuffer.append(this.reversedString.equals(this.aString));
-        System.out.println(aBuffer.toString());
+        aPrint.printAnswer(this.reversedString, this.reversedString.equals(this.aString));
     }
 }

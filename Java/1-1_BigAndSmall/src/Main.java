@@ -1,6 +1,11 @@
 package src;
 
 /**
+ * 問題
+ * 0から1までの Double 型の乱数を発生させ，その値が0.5より小さければ Small，0.5以上であれば Big と出力するプログラムを作成してください．
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda\
  * @version 1.2
