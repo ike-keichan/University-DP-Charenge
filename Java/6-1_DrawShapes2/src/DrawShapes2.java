@@ -10,16 +10,26 @@ import java.awt.Color;
 public class DrawShapes2 extends Object
 {
     /**
+     * キャンパスの縦の長さ
+     */
+    final private Integer height = 1000;
+
+    /**
+     * キャンパスの縦の長さ
+     */
+    final private Integer width = 1000;
+
+    /**
      * 図形を描写するメソッド
      */
     public void drawingShapes()
     {
-        EZ.addRectangle(200, 200, 200, 200, Color.BLUE, true);
-        EZ.addLine(200,  50,  50, 200, Color.RED);
-        EZ.addLine( 50, 200, 200, 350, Color.GREEN);
-        EZ.addLine(200, 350, 350, 200, Color.GRAY);
-        EZ.addLine(350, 200, 200,  50, Color.ORANGE);
-        EZ.addCircle(200, 200, 200, 200, Color.WHITE, true);
+        EZ.addRectangle(this.width/2, this.height/2, this.width/2, this.height/2, Color.BLUE, true);
+        EZ.addLine(this.width/2, this.height/8,  this.width/8, this.height/2, Color.RED);
+        EZ.addLine(this.width/8, this.height/2, this.width/2, this.height*7/8, Color.GREEN);
+        EZ.addLine(this.width/2, this.height*7/8, this.width*7/8, this.height/2, Color.GRAY);
+        EZ.addLine(this.width*7/8, this.height/2, this.width/2,  this.height/8, Color.ORANGE);
+        EZ.addCircle(this.width/2, this.height/2, this.width/2, this.height/2, Color.WHITE, true);
     }
 
     /**
@@ -27,7 +37,7 @@ public class DrawShapes2 extends Object
      */
     public void run()
     {
-        EZ.initialize(400, 400);
+        EZ.initialize(this.width, this.height);
         this.drawingShapes();
     }
 }
