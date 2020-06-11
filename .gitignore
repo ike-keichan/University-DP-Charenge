@@ -1,0 +1,6 @@
+# IDE
+.idea
+.vscode
+
+# trash
+.DS_Store*

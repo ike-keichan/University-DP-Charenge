@@ -25,3 +25,4 @@ wipe: clean
 # 現在のディレクトリをZipファイルにします。
 zip: wipe
 	(cd ../ ; zip -r ./$(ARCHIVE).zip ./$(ARCHIVE)/ --exclude='*/.svn/*')
+

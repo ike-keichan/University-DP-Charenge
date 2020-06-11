@@ -7,6 +7,25 @@
 京都産業大学 コンピュータ理工学部 2018年度春 開講の「発展プログラミング演習」の練習問題を改めて暇つぶしに解いてみたもの。
 練習問題は[こちら](https://ksuap.github.io/2018spring/)
 
+## Version
+### Java
+```
+$ (export JAVA_HOME=`/usr/libexec/java_home -v "14"` ; java -version ; javac -version)
+Picked up _JAVA_OPTIONS: -Dfile.encoding=UTF-8
+java version "14.0.1" 2020-04-14
+Java(TM) SE Runtime Environment (build 14.0.1+7)
+Java HotSpot(TM) 64-Bit Server VM (build 14.0.1+7, mixed mode, sharing)
+Picked up _JAVA_OPTIONS: -Dfile.encoding=UTF-8
+javac 14.0.1
+```
+
+### Apache Ant
+```
+$ ant -version
+Picked up _JAVA_OPTIONS: -Dfile.encoding=UTF-8
+Apache Ant(TM) version 1.10.8 compiled on May 10 2020
+```
+
 ## Java
 ### purpose
 + 過去のプログラムのリファクタリング
@@ -26,7 +45,8 @@
 + 修飾子をできるだけきちんと宣言する。
 + ゲッター、フッターを用いてできるだけ「カプセル化」を実現する。
 + 文字列連結にはできるだけStringBufferを用いる。（実行時間短縮のため）
-+ できるだけラムダ式を用いてみる。
++ ループ処理はできるだけStreamを用いてみる。
++ できるだけラムダ式・関数型インターフェースを用いてみる。
 + Apache Antを用いてjarファイルの生成を行う。
 + Apache Antを用いてJavaDocの生成を行う。
 + Apache Antを用いてアプリケーションの生成を行う。

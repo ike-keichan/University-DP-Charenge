@@ -28,3 +28,4 @@
 (multiplication 1 1 max-number)
 (princ #\newline)
 (multiplications 1 max-number)
+
