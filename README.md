@@ -26,6 +26,18 @@ Picked up _JAVA_OPTIONS: -Dfile.encoding=UTF-8
 Apache Ant(TM) version 1.10.8 compiled on May 10 2020
 ```
 
+### Make
+```
+$ make --version
+GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for i386-apple-darwin11.3.0
+```
+
 ## Java
 ### purpose
 + 過去のプログラムのリファクタリング
