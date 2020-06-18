@@ -52,6 +52,8 @@ public class Remover extends Object
      */
     public void run()
     {
-        this.deletingFileNames.stream().map( deletingFileName -> new File(deletingFileName) ).forEach(this::remove);
+        this.deletingFileNames.stream()
+            .map( deletingFileName -> new File(deletingFileName) )
+            .forEach(this::remove);
     }
 }
