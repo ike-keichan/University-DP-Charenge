@@ -1,6 +1,11 @@
 package src;
 
 /**
+ * 問題
+ * 2つの変数の四則演算+剰余を求めるプログラムを作成しましょう．
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.2

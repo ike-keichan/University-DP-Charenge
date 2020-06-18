@@ -1,6 +1,12 @@
 package src;
 
 /**
+ * 問題
+ * コマンドライン引数で与えられた人に，挨拶しましょう． 
+ * 基本的には，HelloWorld 改と同じですが，もし， "World"が指定されたら，"Hi, World"と気さくに挨拶してください． 
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.2

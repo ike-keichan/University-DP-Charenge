@@ -1,6 +1,11 @@
 package src;
 
 /**
+ * 問題
+ * 与えられた年がうるう年であるか否かを判定しましょう．
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.2

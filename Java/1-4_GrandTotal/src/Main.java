@@ -1,6 +1,11 @@
 package src;
 
 /**
+ * 問題
+ * ループを用いて，1から10までの総和(10を含む)を求めましょう．
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.2

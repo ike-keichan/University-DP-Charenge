@@ -1,6 +1,11 @@
 package src;
 
 /**
+ * 問題
+ * 繰り返しを利用し，出力例の模様を出力してください． 
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.2

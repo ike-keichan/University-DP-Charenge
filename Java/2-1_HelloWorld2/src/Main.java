@@ -1,6 +1,12 @@
 package src;
 
 /**
+ * 問題
+ * コマンドライン引数で与えられた人に，挨拶しましょう． 
+ * もし，誰も指定されない場合は，"Hello, World"と出力してください． 
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.2

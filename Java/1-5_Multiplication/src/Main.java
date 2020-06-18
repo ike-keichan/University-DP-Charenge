@@ -1,6 +1,11 @@
 package src;
 
 /**
+ * 問題
+ * 出力例のように，九九を表示するプログラムを作成しましょう．
+ */
+
+/**
  * メインクラス
  * @author Keisuke Ikeda
  * @version 1.2
