@@ -24,7 +24,11 @@ public class MakeDirectories extends Object
     public MakeDirectories(String[] arguments)
     {
         if(arguments.length == 0){
-            System.out.println("入力がありません。第一引数に「作成するディレクトリ名」の指定をしてください。");
+            System.out.println("入力がありません。引数に「作成するディレクトリ名」の指定をしてください。");
+            System.out.println("引数を「hoge1/」「hoge2/hoge3/」として実行します。");
+            System.out.println("------------------------------------------------------------");
+            this.directoryNames.add("hoge1/");
+            this.directoryNames.add("hoge2/hoge3/");
         } else {
             IntStream.range(0, arguments.length).forEach( index -> {
                 this.directoryNames.add(arguments[index]);
@@ -34,14 +38,15 @@ public class MakeDirectories extends Object
 
     /**
      * ディレクトリを作成するメソッド
-     * @param directory 作成するディレクトリ名
+     * @param aDirectory 作成するディレクトリ
      */
-    public void mkdir(String directory)
+    public void mkdir(File aDirectory)
     {
-        File aFile = new File(directory);
-        Boolean flag = aFile.mkdirs();
+        Boolean flag = aDirectory.mkdirs();
         if(!flag){
-            System.out.println(aFile.getPath() + ": could not make directory");
+            System.out.println(aDirectory.getPath() + ": could not make directory");
+        } else {
+            System.out.println(aDirectory.getPath() + ": make directory");
         }
     }
 
@@ -50,6 +55,8 @@ public class MakeDirectories extends Object
      */
     public void run()
     {
-        this.directoryNames.forEach(this::mkdir);
+        this.directoryNames.stream()
+            .map(directoryName -> new File(directoryName))
+            .forEach(this::mkdir);
     }
 }

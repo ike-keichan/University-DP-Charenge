@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="7-3_MakeDirectories" default="all" basedir=".">
+<project name="8-3_Head" default="all" basedir=".">
 
     <property name="package" value="src" />
     <property name="packagenames" value="${package}" />
@@ -51,8 +51,6 @@
         <delete file="${package}.jar" />
         <delete dir="${docdir}" />
         <delete dir="${instdir}" />
-        <delete dir="./hoge1" />
-        <delete dir="./hoge2" />
         <delete file="../${zipname}.zip" />
         <delete>
             <fileset dir="${package}" includes="*.class" />

@@ -15,12 +15,12 @@ public class FileFinder extends Object
     /**
      * 探索するファイル名を格納するフィールド
      */
-    private String fileName = new String();
+    private String fileName = "Main.java";
 
     /**
      * 探索するディレクトリ名を格納するフィールド
      */
-    private String directoryName = new String();
+    private String directoryName = "./src/";
 
     /**
      * ディレクトリ構造を記憶するフィールド
@@ -33,8 +33,10 @@ public class FileFinder extends Object
      */
     public FileFinder(String[] arguments)
     {
-        if(arguments.length == 0){
+        if(arguments.length == 0 || arguments.length == 1 ){
             System.out.println("入力がありません。第一引数に「ファイル名」、第二引数に「探索するディレクトリ名」の指定をしてください。");
+            System.out.println("第一引数を「Main.java」第二引数を「./src/」として実行します。");
+            System.out.println("------------------------------------------------------------");
         } else {
             this.fileName = arguments[0];
             this.directoryName = arguments[1];
@@ -54,8 +56,7 @@ public class FileFinder extends Object
                 this.findFile(fileName , file);
             });
         } else {
-            if(fileName.equals(directory.getName()))
-            {
+            if(fileName.equals(directory.getName())){
                 this.directoryTree.add(directory);
             }
         }
@@ -66,11 +67,10 @@ public class FileFinder extends Object
      */
     public void run()
     {
-        File aFile = new File(this.directoryName);
-        this.findFile(this.fileName, aFile);
+        this.findFile(this.fileName, new File(this.directoryName));
 
-        this.directoryTree.forEach( file -> {
-            System.out.println(file.getPath());
-        });
+        this.directoryTree.stream()
+            .map(file -> file.getPath())
+            .forEach(System.out::println);
     }
 }

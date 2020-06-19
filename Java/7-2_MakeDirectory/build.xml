@@ -51,6 +51,8 @@
         <delete file="${package}.jar" />
         <delete dir="${docdir}" />
         <delete dir="${instdir}" />
+        <delete dir="./hoge" />
+        <delete dir="./hogehoge" />
         <delete file="../${zipname}.zip" />
         <delete>
             <fileset dir="${package}" includes="*.class" />

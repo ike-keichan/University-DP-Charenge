@@ -14,12 +14,17 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * ファイルの中を閲覧するクラス
+ * ファイルの中を行数指定で閲覧するクラス
  * @author Keisuke Ikeda
  * @version 1.1
  */
-public class Cat2 extends Object
+public class Head extends Object
 {
+    /**
+     * 探索する文字列を格納するフィールド
+     */
+    private Integer lineNumber = 20;
+
     /**
      * 閲覧するファイル名を格納するフィールド
      */
@@ -29,16 +34,17 @@ public class Cat2 extends Object
      * コンストラクタ
      * @param arguments 引数の文字列の配列
      */
-    public Cat2(String[] arguments)
+    public Head(String[] arguments)
     {
-        if(arguments.length == 0){
-            System.out.println("入力がありません。引数に「閲覧するファイル名」の指定をしてください。");
-            System.out.println("引数を「./src/Main.java」「./src/Cat2.java」として実行します。");
+        if(arguments.length == 0 | arguments.length == 1){
+            System.out.println("入力がありません。第一引数に「表示する行数」、第二引数に「閲覧するファイル名」の指定をしてください。");
+            System.out.println("第一引数を「20」、第二引数以降を「./src/Main.java」「./src/Head.java」として実行します。");
             System.out.println("------------------------------------------------------------");
             this.fileNames.add("./src/Main.java");
-            this.fileNames.add("./src/Cat2.java");
+            this.fileNames.add("./src/Head.java");
         } else {
-            IntStream.range(0, arguments.length).forEach( index -> {
+            this.lineNumber = Integer.valueOf(arguments[0]);
+            IntStream.range(1, arguments.length).forEach( index -> {
                 this.fileNames.add(arguments[index]);
             });
         }
@@ -62,11 +68,11 @@ public class Cat2 extends Object
             String aString = null;
             Integer index = 0;
 
-            // 一行ずつ読み込みます。
-            while ((aString = aBufferedReader.readLine()) != null) 
+            while ((aString = aBufferedReader.readLine()) != null) // 一行ずつ読み込みます。
 			{
                 index++;
                 this.printFile(index, aString);
+                if(index == lineNumber){ break; }
             }
             
             System.out.println("------------------------------------------------------------");
@@ -95,7 +101,7 @@ public class Cat2 extends Object
     }
 
     /**
-     * 発展プログラミング演習 練習問題8-1の起動プログラム
+     * 発展プログラミング演習 練習問題8-3の起動プログラム
      */
     public void run()
     {
