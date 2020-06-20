@@ -1,15 +1,16 @@
 package src;
 
-import java.util.List;
-import java.util.stream.IntStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * 学籍番号を判別するクラス
  * @author Keisuke Ikeda
- * @version 1.2
+ * @version 1.3
  */
 public class StudentValidator extends Object
 {
@@ -25,9 +26,9 @@ public class StudentValidator extends Object
             this.validate("744069");
         }else {
             //コマンドライン引数の文字列の配列をvalidateに一つずつ受け渡す
-            for(String argument: arguments){
+            Stream.of(arguments).forEach(argument -> {
                 this.validate(argument);
-            }
+            });
         }
     }
 

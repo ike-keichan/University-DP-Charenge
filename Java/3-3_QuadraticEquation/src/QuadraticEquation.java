@@ -1,12 +1,13 @@
 package src;
 
 import java.util.List;
+import java.util.stream.Stream;
 import java.util.ArrayList;
 
 /**
  * 二次方程式の解を求めるクラス
  * @author Keisuke Ikeda
- * @version 1.2
+ * @version 1.3
  */
 public class QuadraticEquation extends Object
 {
@@ -29,9 +30,9 @@ public class QuadraticEquation extends Object
         }
 
         //標準入力の文字列の配列をListに写す。
-        for(String argument: arguments){
+        Stream.of(arguments).forEach(argument -> {
             this.aList.add(Double.valueOf(argument));
-        }
+        });
     }
 
     /**

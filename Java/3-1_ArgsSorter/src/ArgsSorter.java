@@ -1,14 +1,15 @@
 package src;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * 文字列をソートするクラス
  * @author Keisuke Ikeda
- * @version 1.2
+ * @version 1.3
  */
 public class ArgsSorter extends Object
 {
@@ -36,10 +37,10 @@ public class ArgsSorter extends Object
             this.aList.add("a");
             this.aList.add("c");
         }else {
-             //標準入力の文字列の配列をListに写す
-            for(String argument: arguments){
-                this.aList.add(argument);
-            }
+            //標準入力の文字列の配列をListに写す
+            Stream.of(arguments).forEach(argument -> {
+                this.aList.add(String.valueOf(argument));
+            });
         }
     }
 
