@@ -138,7 +138,7 @@ public class Tee extends Object
                 //コマンドの出力結果をバイト単位でアクセスできるようにする。
                 InputStream anInputStream = catProcess.getInputStream();
                 //文字単位でアクセスできるようにする。
-                InputStreamReader anInputStreamReader = new InputStreamReader(anInputStream);
+                InputStreamReader anInputStreamReader = new InputStreamReader(anInputStream, "UTF-8");
                 //バッファを用いたリーダを用意する。高速に読むことが可能。
                 BufferedReader aBufferedReader = new BufferedReader(anInputStreamReader);
 

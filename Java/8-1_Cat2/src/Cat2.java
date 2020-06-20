@@ -55,7 +55,7 @@ public class Cat2 extends Object
             //バイト単位でアクセスできるようにする。
             FileInputStream aFileInputStream = new FileInputStream(aFile);
             //文字単位でアクセスできるようにする。
-            InputStreamReader anInputStreamReader = new InputStreamReader(aFileInputStream);
+            InputStreamReader anInputStreamReader = new InputStreamReader(aFileInputStream, "UTF-8");
             //バッファを用いたリーダを用意する。高速に読むことが可能。
             BufferedReader aBufferedReader = new BufferedReader(anInputStreamReader);
 
