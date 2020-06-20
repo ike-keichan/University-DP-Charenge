@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="9-1_ZipCode" default="all" basedir=".">
+<project name="9-2_PhoneBook" default="all" basedir=".">
 
     <property name="package" value="src" />
     <property name="packagenames" value="${package}" />

@@ -8,8 +8,8 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -26,6 +26,11 @@ public class Cat2 extends Object
     private List<String> fileNames = new ArrayList<String>();
 
     /**
+     * セパレータを出力する関数
+     */
+    final private Runnable separater = () -> System.out.println("------------------------------------------------------------");
+
+    /**
      * コンストラクタ
      * @param arguments 引数の文字列の配列
      */
@@ -34,7 +39,7 @@ public class Cat2 extends Object
         if(arguments.length == 0){
             System.out.println("入力がありません。引数に「閲覧するファイル名」の指定をしてください。");
             System.out.println("引数を「./src/Main.java」「./src/Cat2.java」として実行します。");
-            System.out.println("------------------------------------------------------------");
+            this.separater.run();
             this.fileNames.add("./src/Main.java");
             this.fileNames.add("./src/Cat2.java");
         } else {
@@ -69,7 +74,7 @@ public class Cat2 extends Object
                 this.printFile(index, aString);
             }
             
-            System.out.println("------------------------------------------------------------");
+            this.separater.run();
 
             //ファイルを閉じる
             aBufferedReader.close(); 

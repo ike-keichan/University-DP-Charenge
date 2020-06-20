@@ -28,6 +28,11 @@ public class FileFinder extends Object
     private List<File> directoryTree = new ArrayList<File>();
 
     /**
+     * セパレータを出力する関数
+     */
+    final private Runnable separater = () -> System.out.println("------------------------------------------------------------");
+
+    /**
      * コンストラクタ
      * @param arguments 引数の文字列の配列
      */
@@ -36,7 +41,7 @@ public class FileFinder extends Object
         if(arguments.length == 0 || arguments.length == 1 ){
             System.out.println("入力がありません。第一引数に「ファイル名」、第二引数に「探索するディレクトリ名」の指定をしてください。");
             System.out.println("第一引数を「Main.java」第二引数を「./src/」として実行します。");
-            System.out.println("------------------------------------------------------------");
+            this.separater.run();
         } else {
             this.fileName = arguments[0];
             this.directoryName = arguments[1];
@@ -72,5 +77,6 @@ public class FileFinder extends Object
         this.directoryTree.stream()
             .map(file -> file.getPath())
             .forEach(System.out::println);
+        this.separater.run();
     }
 }

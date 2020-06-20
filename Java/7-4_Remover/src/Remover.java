@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.lang.Process;
 import java.lang.ProcessBuilder;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.ArrayList;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -24,6 +25,11 @@ public class Remover extends Object
      * 削除するファイル名を格納するフィールド
      */
     private List<String> fileNames = new ArrayList<String>();
+
+    /**
+     * セパレータを出力する関数
+     */
+    final private Consumer<String> separater = (aString) -> System.out.println(aString + "------------------------------------------------------------");
 
     /**
      * コンストラクタ
@@ -93,7 +99,7 @@ public class Remover extends Object
      */
     public void lsDirectory(String aString) throws IOException
     {
-        System.out.println(aString + "------------------------------------------------------------");
+        this.separater.accept(aString);
         ProcessBuilder lsProcessBuilder = new ProcessBuilder("ls", "-l", ".");
         Process aProcess = lsProcessBuilder.start();
 
@@ -113,6 +119,6 @@ public class Remover extends Object
             .forEach(this::remove);
 
         this.lsDirectory("after");
-        System.out.println("------------------------------------------------------------");
+        this.separater.accept("");
     }
 }

@@ -8,8 +8,8 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -31,6 +31,11 @@ public class Grep extends Object
     private List<String> fileNames = new ArrayList<String>();
 
     /**
+     * セパレータを出力する関数
+     */
+    final private Runnable separater = () -> System.out.println("------------------------------------------------------------");
+
+    /**
      * コンストラクタ
      * @param arguments 引数の文字列の配列
      */
@@ -39,7 +44,7 @@ public class Grep extends Object
         if(arguments.length == 0 || arguments.length == 1){
             System.out.println("入力がありません。第一引数に「探索する文字列」、第二引数以降に「閲覧するファイル名」の指定をしてください。");
             System.out.println("引数第一引数を「new」、第二引数以降を「./src/Main.java」「./src/Grep.java」として実行します。");
-            System.out.println("------------------------------------------------------------");
+            this.separater.run();
             this.fileNames.add("./src/Main.java");
             this.fileNames.add("./src/Grep.java");
         } else {
@@ -75,7 +80,7 @@ public class Grep extends Object
                 }
             }
             
-            System.out.println("------------------------------------------------------------");
+            this.separater.run();
 
             //ファイルを閉じる
             aBufferedReader.close(); 

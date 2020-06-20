@@ -31,6 +31,11 @@ public class Head extends Object
     private List<String> fileNames = new ArrayList<String>();
 
     /**
+     * セパレータを出力する関数
+     */
+    final private Runnable separater = () -> System.out.println("------------------------------------------------------------");
+
+    /**
      * コンストラクタ
      * @param arguments 引数の文字列の配列
      */
@@ -39,7 +44,7 @@ public class Head extends Object
         if(arguments.length == 0 | arguments.length == 1){
             System.out.println("入力がありません。第一引数に「表示する行数」、第二引数に「閲覧するファイル名」の指定をしてください。");
             System.out.println("第一引数を「20」、第二引数以降を「./src/Main.java」「./src/Head.java」として実行します。");
-            System.out.println("------------------------------------------------------------");
+            this.separater.run();
             this.fileNames.add("./src/Main.java");
             this.fileNames.add("./src/Head.java");
         } else {
@@ -75,7 +80,7 @@ public class Head extends Object
                 if(index == lineNumber){ break; }
             }
             
-            System.out.println("------------------------------------------------------------");
+            this.separater.run();
 
             //ファイルを閉じる
             aBufferedReader.close(); 

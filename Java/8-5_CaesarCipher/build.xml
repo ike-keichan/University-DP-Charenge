@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="9-1_ZipCode" default="all" basedir=".">
+<project name="8-5_CaesarCipher" default="all" basedir=".">
 
     <property name="package" value="src" />
     <property name="packagenames" value="${package}" />
     <property name="destdir" value="./Classes" />
     <property name="docdir" value="./JavaDoc" />
     <property name="instdir" value="./Program.app/Contents/Resources/Java" />
-    <property name="copyright" value="Copyright 2019-20 KEISUKE IKEDA. All Rights Reserved." />
+    <property name="copyright" value="Copyright 2020 KEISUKE IKEDA. All Rights Reserved." />
     <property name="zipname" value="${ant.project.name}" />
 
     <target name="all" depends="jar" description="build all">
@@ -51,6 +51,7 @@
         <delete file="${package}.jar" />
         <delete dir="${docdir}" />
         <delete dir="${instdir}" />
+        <delete file="after.txt" />
         <delete file="../${zipname}.zip" />
         <delete>
             <fileset dir="${package}" includes="*.class" />

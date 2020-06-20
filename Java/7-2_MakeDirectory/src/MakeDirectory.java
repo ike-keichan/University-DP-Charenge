@@ -18,6 +18,11 @@ public class MakeDirectory extends Object
     private List<String> directoryNames = new ArrayList<String>();
 
     /**
+     * セパレータを出力する関数
+     */
+    final private Runnable separater = () -> System.out.println("------------------------------------------------------------");
+
+    /**
      * コンストラクタ
      * @param arguments 引数の文字列の配列
      */
@@ -26,7 +31,7 @@ public class MakeDirectory extends Object
         if(arguments.length == 0){
             System.out.println("入力がありません。引数に「作成するディレクトリ名」の指定をしてください。");
             System.out.println("引数を「hoge/」「hogehoge/」として実行します。");
-            System.out.println("------------------------------------------------------------");
+            this.separater.run();
             this.directoryNames.add("hoge/");
             this.directoryNames.add("hogehoge/");
         } else {
@@ -58,5 +63,6 @@ public class MakeDirectory extends Object
         this.directoryNames.stream()
             .map(directoryName -> new File(directoryName))
             .forEach(this::mkdir);
+        this.separater.run();
     }
 }

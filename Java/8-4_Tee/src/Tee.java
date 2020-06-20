@@ -13,6 +13,7 @@ import java.io.UnsupportedEncodingException;
 import java.lang.Process;
 import java.lang.ProcessBuilder;
 import java.util.ArrayList;
+import java.util.function.Consumer;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -35,6 +36,11 @@ public class Tee extends Object
     private List<String> inputStrings = new ArrayList<String>();
 
     /**
+     * セパレータを出力する関数
+     */
+    final private Consumer<String> separater = (aString) -> System.out.println(aString + "------------------------------------------------------------");
+
+    /**
      * コンストラクタ
      * @param arguments 引数の文字列の配列
      */
@@ -43,7 +49,7 @@ public class Tee extends Object
         if(arguments.length == 0 | arguments.length == 1){
             System.out.println("入力がありません。標準入力をパイプでつなぎ、引数に「作成するファイル名」の指定をしてください。");
             System.out.println("引数を「hoge1.txt」「hoge2.txt」として実行します。");
-            System.out.println("------------------------------------------------------------");
+            this.separater.accept("");
             this.fileNames.add("hoge1.txt");
             this.fileNames.add("hoge2.txt");
         } else {
@@ -129,7 +135,7 @@ public class Tee extends Object
     public void printFile()
     {
         this.fileNames.forEach(fileName -> {
-            System.out.println(fileName + "------------------------------------------------------------");
+            this.separater.accept(fileName);
             try 
             { 
                 ProcessBuilder catProcessBuilder = new ProcessBuilder("cat", fileName);
@@ -160,11 +166,12 @@ public class Tee extends Object
     /**
      * 発展プログラミング演習 練習問題8-4の起動プログラム
      */
-    public void run() throws IOException
+    public void run()
     {
         this.readSystem();
         this.printSystem();
         this.writeFile();
         this.printFile();
+        this.separater.accept("");
     }
 }
