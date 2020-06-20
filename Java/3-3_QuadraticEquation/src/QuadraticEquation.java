@@ -36,6 +36,15 @@ public class QuadraticEquation extends Object
     }
 
     /**
+     * 判別式D=b2−4acの結果を返すプログラム
+     * @return 判別式D=b2−4acの結果
+     */
+    public Double discriminant()
+    {
+        return aList.get(1) * aList.get(1) - 4 * aList.get(0) * aList.get(2);
+    }
+
+    /**
      * 発展プログラミング演習 練習問題3-3の起動プログラム。
      */
     public void run()
@@ -48,21 +57,12 @@ public class QuadraticEquation extends Object
 
         //判別の式より、出力を判別
         if(aDouble > 0){
-            aPrint.RealNumberSolution(this.aList, aDouble);
+            aPrint.realNumberSolution(this.aList, aDouble);
         }else if(aDouble < 0){
-            aPrint.ImaginaryNumberSolution(this.aList, aDouble);
+            aPrint.imaginaryNumberSolution(this.aList, aDouble);
         }else {
-            aPrint.MultipleSolution(this.aList, aDouble);
+            aPrint.multipleSolution(this.aList, aDouble);
         }
 
-    }
-
-    /**
-     * 判別式D=b2−4acの結果を返すプログラム
-     * @return 判別式D=b2−4acの結果
-     */
-    public Double discriminant()
-    {
-        return aList.get(1) * aList.get(1) - 4 * aList.get(0) * aList.get(2);
     }
 }

@@ -34,16 +34,6 @@ public class MonteCarloPi extends Object
     }
 
     /**
-     * 発展プログラミング演習 練習問題3-4の起動プログラム。
-     */
-    public void run()
-    {
-        //Printクラスのインスタンス化
-        Print aPrint = new Print();
-        aPrint.printAnswer(this.getApproximation());
-    }
-
-    /**
      * 円への衝突回数をカウントし、πの近似値を算出するプログラム。
      * @return  モンテカルロ法によって算出されたπの近似値
      */
@@ -64,5 +54,15 @@ public class MonteCarloPi extends Object
         });
         
         return hitCount * 4.0 / aNumber;
+    }
+
+    /**
+     * 発展プログラミング演習 練習問題3-4の起動プログラム。
+     */
+    public void run()
+    {
+        //Printクラスのインスタンス化
+        Print aPrint = new Print();
+        aPrint.printAnswer(this.getApproximation());
     }
 }

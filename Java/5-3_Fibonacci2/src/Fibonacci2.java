@@ -3,6 +3,7 @@ package src;
 import java.util.List;
 import java.util.ArrayList;
 import java.math.BigInteger;
+import java.util.function.IntUnaryOperator;
 import java.util.stream.IntStream;
 
 /**
@@ -14,7 +15,7 @@ import java.util.stream.IntStream;
 /**
  * Fibonacciを求めるクラス
  * @author Keisuke Ikeda
- * @version 1.1
+ * @version 1.25
  */
 public class Fibonacci2 extends Object
 {
@@ -22,6 +23,20 @@ public class Fibonacci2 extends Object
      * フィボナッチ数列で計算するフィールド
      */
     private List<Integer> aList = new ArrayList<Integer>();
+
+    /**
+	 * 条件式の関数 aNumberが0または1だとtrue
+	 */
+	final private Predicate<Double> checker = (aNumber) -> aNumber == 0 || aNumber == 1;
+
+    /**
+     * フィボナッチ数を計算する関数
+     */
+    final private IntUnaryOperator fibonacci = (aNumber) -> 
+    {
+        if(this.checker.test(aNumber)){ return aNumber; }
+        return this.fibonacci.applyAsInt(aNumber - 1) + this.fibonacci.applyAsInt(aNumber - 2);
+    };
 
     /**
      * コンストラクタ
@@ -39,17 +54,6 @@ public class Fibonacci2 extends Object
     }
 
     /**
-     * フィボナッチ数を計算するメソッド
-     * @param aNumber 求めるフィボナッチ数
-     * @return 求めたフィボナッチ数
-     */
-    public Integer fibonacci(Integer aNumber)
-    {
-        if(aNumber == 0 || aNumber == 1){ return aNumber; }
-        return this.fibonacci(aNumber - 1) + this.fibonacci(aNumber - 2);
-    }
-
-    /**
      * 発展プログラミング演習 練習問題5-3のメインプログラム
      */
     public void run()
@@ -59,7 +63,7 @@ public class Fibonacci2 extends Object
 
         //出力
         aList.forEach(index -> {
-            aPrint.printAnswer(index, this.fibonacci(index));
+            aPrint.printAnswer(index, this.fibonacci.applyAsInt(index));
         });
     }
 }

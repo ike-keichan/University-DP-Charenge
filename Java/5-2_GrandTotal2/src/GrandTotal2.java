@@ -1,9 +1,11 @@
 package src;
 
+import java.util.function.IntUnaryOperator;
+
 /**
  * 総和を求めるクラス
  * @author Keisuke Ikeda
- * @version 1.1
+ * @version 1.2
  */
 public class GrandTotal2 extends Object
 {
@@ -11,6 +13,15 @@ public class GrandTotal2 extends Object
      * コマンドライン引数から与えられた最大値を格納するフィールド
      */
     private Integer aNumber = 10;
+
+    /**
+     * 総和を求める関数
+     */
+    final private IntUnaryOperator grandTotal = (aNumber) -> 
+    {
+        if(aNumber == 1){ return 1; }
+        return aNumber + this.grandTotal.applyAsInt(aNumber -1);
+    };
 
     /**
      * コンストラクタ
@@ -27,17 +38,6 @@ public class GrandTotal2 extends Object
     }
 
     /**
-     * 総和を求めるメソッド
-     * @param aNumber 加算する数
-     * @return 総和
-     */
-    public Integer grandTotal(Integer aNumber)
-    {
-        if(aNumber == 1){ return 1; }
-        return aNumber + grandTotal(aNumber -1);
-    }
-
-    /**
      * 発展プログラミング演習 練習問題5-2の起動プログラム
      */
     public void run()
@@ -46,7 +46,7 @@ public class GrandTotal2 extends Object
         Print aPrint = new Print();
 
         //出力
-        aPrint.printAnswer(this.aNumber, this.grandTotal(this.aNumber));
+        aPrint.printAnswer(this.aNumber, this.grandTotal.applyAsInt(this.aNumber));
     }
 
 }

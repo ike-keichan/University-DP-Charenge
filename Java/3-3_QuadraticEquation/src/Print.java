@@ -15,7 +15,7 @@ public class Print extends Object
      * @param aList 入力値を記憶するリスト
      * @param aDouble 判別式の解
      */
-    public void RealNumberSolution(List<Double> aList, Double aDouble)
+    public void realNumberSolution(List<Double> aList, Double aDouble)
     {
         //解を計算
         Double answer1 = -1 * aList.get(1) / (2 * aList.get(0));
@@ -35,7 +35,7 @@ public class Print extends Object
      * @param aList 入力値を記憶するリスト
      * @param aDouble 判別式の解
      */
-    public void ImaginaryNumberSolution(List<Double> aList, Double aDouble)
+    public void imaginaryNumberSolution(List<Double> aList, Double aDouble)
     {
         //解を計算
         Double answer1 = -1 * aList.get(1) / (2 * aList.get(0));
@@ -55,7 +55,7 @@ public class Print extends Object
      * @param aList 入力値を記憶するリスト
      * @param aDouble 判別式の解
      */
-    public void MultipleSolution(List<Double> aList, Double aDouble)
+    public void multipleSolution(List<Double> aList, Double aDouble)
     {
         //解を計算
         Double answer1 = -1 * aList.get(1) / (2 * aList.get(0));

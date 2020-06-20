@@ -46,17 +46,6 @@ public class TrapezoidalRulePi extends Object
     }
 
     /**
-     * 発展プログラミング演習 練習問題3-5の起動プログラム。
-     */
-    public void run()
-    {
-        //Printクラスのインスタンス化
-        Print aPrint = new Print();
-        //出力
-        aPrint.printAnswer(this.getApproximation());
-    }
-
-    /**
      * 台形の面積を算出し、足し合わせてπの近似値を算出するプログラム。
      * @return πの近似値
      */
@@ -67,6 +56,17 @@ public class TrapezoidalRulePi extends Object
             .sum();
         
         return this.sum * 4;
+    }
+
+    /**
+     * 発展プログラミング演習 練習問題3-5の起動プログラム。
+     */
+    public void run()
+    {
+        //Printクラスのインスタンス化
+        Print aPrint = new Print();
+        //出力
+        aPrint.printAnswer(this.getApproximation());
     }
 }
 

@@ -2,12 +2,13 @@ package src;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.function.DoubleBinaryOperator;
 import java.util.stream.IntStream;
 
 /**
  * 回文を判定するクラス
  * @author Keisuke Ikeda
- * @version 1.1
+ * @version 1.2
  */
 public class CubicRoot extends Object
 {     
@@ -20,6 +21,11 @@ public class CubicRoot extends Object
      * 閾値 
      */
     final private Double threshold = 0.00001;
+
+    /**
+     * x^3 - n を計算する関数
+     */
+    final private DoubleBinaryOperator function = (aNumber, xValue) -> xValue * xValue * xValue - aNumber;
 
     /**
      * コンストラクタ
@@ -45,26 +51,15 @@ public class CubicRoot extends Object
     public Double calculate(Integer aNumber)
     {
         Double xValue = 10.0;
-        Double yValue = function(Double.valueOf(aNumber), xValue);
+        Double yValue = this.function.applyAsDouble(Double.valueOf(aNumber), xValue);
 
         while(yValue > this.threshold){
             Double aValue = 3 * xValue * xValue;
             Double bValue = yValue - aValue * xValue;
             xValue = -1 * bValue / aValue;
-            yValue = function(Double.valueOf(aNumber), xValue);
+            yValue = this.function.applyAsDouble(Double.valueOf(aNumber), xValue);
         }
         return xValue;
-    }
-
-    /**
-     * x^3 - n を計算するメソッド
-     * @param xValue xの値
-     * @param aNumber nの値
-     * @return x^3 - n
-     */
-    public Double function(Double aNumber, Double xValue)
-    {
-        return xValue * xValue * xValue - aNumber;
     }
 
     /**
