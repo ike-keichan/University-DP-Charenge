@@ -3,14 +3,14 @@ package src;
 /**
  * 入力が合った場合、その入力に対して挨拶を行うクラス
  * @author Keisuke Ikeda
- * @version 1.2
+ * @version 1.3
  */
 public class HelloWorld2 extends Object
 {
     /**
      * 入力を格納するフィールド
      */
-    private String aString;
+    private String aString = "World";
 
     /**
      * コンストラクタ
@@ -19,6 +19,7 @@ public class HelloWorld2 extends Object
     public HelloWorld2(String[] arguments)
     {
         //　コマンドライン引数の有無の判別
+        if (arguments.length == 0) { System.out.println("入力がなかったため、コマンドライン引数を「World」とします"); }
         this.aString = (arguments.length == 0) ? "World" : arguments[0] ;
     }
 

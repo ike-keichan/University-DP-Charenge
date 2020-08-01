@@ -8,7 +8,7 @@ package src;
 /**
  * メインクラス
  * @author Keisuke Ikeda\
- * @version 1.2
+ * @version 1.3
  */
 public class Main extends Object
 {
@@ -19,7 +19,6 @@ public class Main extends Object
 	public static void main(String[] arguments)
     {
         BigAndSmall aBigAndSmall = new BigAndSmall();
-        aBigAndSmall.run(arguments);
+        aBigAndSmall.run();
 	}
-
 }

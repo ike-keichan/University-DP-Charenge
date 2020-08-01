@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 /**
  * FizzBuzzを求めるクラス
  * @author Keisuke Ikeda
- * @version 1.2
+ * @version 1.3
  */
 public class FizzBuzz extends Object
 {
@@ -20,11 +20,8 @@ public class FizzBuzz extends Object
      */
     public FizzBuzz(String[] arguments)
     {
-        if(arguments.length == 0){
-            System.out.println("入力がなかったため、コマンドライン引数を「15」とします");
-        } else{
-            this.aNumber = Integer.valueOf(arguments[0]);
-        }
+        if(arguments.length == 0){ System.out.println("入力がなかったため、コマンドライン引数を「15」とします"); }
+        this.aNumber = (arguments.length == 0) ? 15 : Integer.valueOf(arguments[0]);
     }
 
     /**
@@ -32,16 +29,12 @@ public class FizzBuzz extends Object
      */
     public void run()
     {
-        IntStream.rangeClosed(1, this.aNumber).forEach( index -> {
-            if(index % 15 == 0){
-                System.out.println("FizzBuzz");
-            }else if(index % 3 == 0){
-                System.out.println("Fizz");
-            }else if(index % 5 == 0){
-                System.out.println("Buzz");
-            }else {
-                System.out.println(index);
-            }
-        });
+        IntStream.rangeClosed(1, this.aNumber)
+        .mapToObj( index -> 
+            (index % 15 == 0) ? "FizzBuzz" :
+            (index % 3 == 0) ? "Fizz" :
+            (index % 5 == 0) ? "Buzz" :
+            String.valueOf(index)
+        ).forEach(System.out::println);
     }
 }

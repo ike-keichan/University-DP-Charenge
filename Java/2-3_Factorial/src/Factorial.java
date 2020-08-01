@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 /**
  * 階乗を求めるクラス
  * @author Keisuke Ikeda
- * @version 1.2
+ * @version 1.3
  */
 public class Factorial extends Object
 {
@@ -25,11 +25,8 @@ public class Factorial extends Object
      */
     public Factorial(String[] arguments)
     {
-        if(arguments.length == 0){
-            System.out.println("入力がなかったため、コマンドライン引数を「10」とします");
-        } else{
-            this.aNumber = Integer.valueOf(arguments[0]);
-        }
+        if(arguments.length == 0){ System.out.println("入力がなかったため、コマンドライン引数を「10」とします"); }
+        this.aNumber = (arguments.length == 0) ? 10 : Integer.valueOf(arguments[0]);
     }
 
     /**

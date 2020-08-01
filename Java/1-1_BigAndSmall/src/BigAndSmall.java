@@ -5,15 +5,15 @@ import java.util.function.Predicate;
 
 /**
  * ランダムな数字を0.5と比較した大小を出力するクラス
- * @author Keisuke Ikeda\
- * @version 1.2
+ * @author Keisuke Ikeda
+ * @version 1.3
  */
 public class BigAndSmall extends Object
 {
 	/**
 	 * 条件式の関数 argumentが0.5未満だとtrue
 	 */
-	private Predicate<Double> checker = argument -> argument < 0.5;
+	private Predicate<Double> checker = (argument) -> argument < 0.5;
 
 	/**
 	 * valueを出力する関数
@@ -27,23 +27,19 @@ public class BigAndSmall extends Object
 
 	/**
 	 * 発展プログラミング演習 練習問題1-1の起動プログラム
-	 * @param arguments 引数の文字列の配列
 	 */
-	public void run(String[] arguments)
+	public void run()
 	{
 		//　乱数の宣言
 		Double aDouble = Math.random();
 
-		// 文字列の宣言
-		String aString = new String();
-
 		//　生成した乱数が0.5と比較しての大小を判定
-		aString = (checker.test(aDouble)) ?  "Small" : "Big" ;
+		String aString = (checker.test(aDouble)) ?  "Small" : "Big" ;
 
 		// 判定結果を表示
 		valuePrint.accept(aDouble);
 		resultPrint.accept(aString);
-		
-	}
 
+		return;
+	}
 }

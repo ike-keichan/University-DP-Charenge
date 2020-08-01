@@ -15,7 +15,6 @@ public class Multiplication extends Object
      */
     public void run(String[] arguments)
     {
-
         //　一列目の出力
         System.out.println(" ＼ 1  2  3  4  5  6  7  8  9");
 
@@ -28,5 +27,6 @@ public class Multiplication extends Object
             System.out.println();
         });
 
+        return;
     }
 }
