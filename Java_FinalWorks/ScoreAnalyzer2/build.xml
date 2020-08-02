@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="ScoreAnalyzer1" default="all" basedir=".">
+<project name="ScoreAnalyzer2" default="all" basedir=".">
 
     <property name="package" value="src" />
     <property name="packagenames" value="${package}" />
     <property name="destdir" value="./Classes" />
     <property name="docdir" value="./JavaDoc" />
-    <property name="instdir" value="./ScoreAnalyzer1.app/Contents/Resources/Java" />
+    <property name="instdir" value="./ScoreAnalyzer2.app/Contents/Resources/Java" />
     <property name="copyright" value="Copyright 2019-20 KEISUKE IKEDA. All Rights Reserved." />
     <property name="zipname" value="${ant.project.name}" />
 

@@ -3,7 +3,6 @@ package src;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.IntStream;
 
 /**
  * 発展プログラミング演習 最終課題STEP1のクラス
