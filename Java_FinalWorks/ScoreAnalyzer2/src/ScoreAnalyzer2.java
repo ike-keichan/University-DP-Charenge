@@ -108,8 +108,8 @@ public class ScoreAnalyzer2 extends Object
 	{
 		final StringBuffer aBuffer = new StringBuffer();
 		this.scoresList.forEach(item -> {
-				aBuffer.append(String.format("%7s", item));
-				if(!item.equals(this.scoresList.get(this.scoresList.size() - 1))){ aBuffer.append(" , "); }
+			aBuffer.append(String.format("%7s", item));
+			if(!item.equals(this.scoresList.get(this.scoresList.size() - 1))){ aBuffer.append(" , "); }
 		});
 		Printer aPrinter = new Printer();
 		aPrinter.perform(" ", aBuffer.toString());
